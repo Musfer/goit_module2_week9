@@ -25,7 +25,7 @@ def confirm(question):
 if __name__ == "__main__":
     current_user_id = 1
     user = session.query(User).filter_by(id=current_user_id).first()
-    login = user.login
+    login = user.login if user else None
     if login is None:
         user = User(login="TestUser", password="test")
         session.add(user)
