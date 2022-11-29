@@ -5,11 +5,7 @@ Set virtual environment using `pipenv`:
 pipenv install
 pipenv shell
 ```
-Create an empty database with:
-```
-alembic revision --autogenerate -m 'Init'
-alembic upgrade head
-```
+
 start working personal assistant using
 ```
 python main.py
